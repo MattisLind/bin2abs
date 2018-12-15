@@ -7,3 +7,8 @@ of the input file + the size of the header (6 bytes). Then the start address of 
 After bin2abs has copied the data it will append a checksum which is the two's complement of the module 256 sum o all bytes including the size byte header.
 
 SimH loader doesn't allow loading of absolute loader files which doesn't have a start record. We then append a dummy record to make SimH happy.
+
+# compile
+
+cc -o bin2abs bin2abs.c
+
